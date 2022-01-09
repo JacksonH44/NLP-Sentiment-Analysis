@@ -4,7 +4,6 @@ import random
 from nltk.classify import naivebayes
 import pickle
 from nltk.tokenize import word_tokenize
-#from voteClassifier import VoteClassifier
 
 from sklearn.naive_bayes import MultinomialNB, BernoulliNB
 
@@ -13,19 +12,6 @@ from sklearn.svm import LinearSVC, NuSVC
 
 from nltk.classify import ClassifierI
 from statistics import mode
-
-# Create the document we train on
-# documents = [(list(movie_reviews.words(fileid)), category)
-#              for category in movie_reviews.categories() for fileid in movie_reviews.fileids(category)]
-
-# # All data is originally organized by sentiment
-# random.shuffle(documents)
-
-
-# # Remove casing
-# all_words = []
-# for w in movie_reviews.words():
-#     all_words.append(w.lower())
 
 # Read in Twitter reviews
 short_pos = open("short_reviews/positive.txt", "r").read()
@@ -161,14 +147,6 @@ save_sgd = open("pickle/sgd.pickle", "wb")
 pickle.dump(sgd, save_sgd)
 save_sgd.close()
 
-# Support Vector Machine
-
-# svc = SklearnClassifier(SVC(gamma="auto"))
-# svc.train(training_set)
-
-# print("Support Vector Machine algo accuracy:",
-#       (nltk.classify.accuracy(svc, testing_set)) * 100)
-
 # Linear Support Vector Machine
 l_svc = SklearnClassifier(LinearSVC())
 l_svc.train(training_set)
@@ -179,21 +157,3 @@ print("Linear Support Vector Machine algo accuracy:",
 save_l_svc = open("pickle/l_svc.pickle", "wb")
 pickle.dump(l_svc, save_l_svc)
 save_l_svc.close()
-
-# # Nu-Support Vector Machine
-# nu_svc = SklearnClassifier(NuSVC())
-# nu_svc.train(training_set)
-
-# print("Nu-Support Vector Machine algo accuracy:",
-#       (nltk.classify.accuracy(nu_svc, testing_set)) * 100)
-
-# save_nu_svc = open("pickle/nu_svc.pickle", "wb")
-# pickle.dump(nu_svc, save_nu_svc)
-# save_nu_svc.close()
-
-# # Create a voting system between classifiers
-# voted_classifier = VoteClassifier(
-#     classifier, mnb, bnb, log_reg, sgd, svc, l_svc, nu_svc)
-
-# print("Voted classifier accuracy:",
-#       (nltk.classify.accuracy(voted_classifier, testing_set)) * 100)
