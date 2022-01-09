@@ -8,7 +8,7 @@ I am completing a larger project on emotional sentiment analysis and wanted to g
 
 # Challenges
 
-The main challenges were finding ways to tweak models and waiting long for the code to run
+The main challenges were finding ways to tweak models and waiting long for the code to run. I tried to also include the SVM and Nu-SVM but I wasn't able to make them converge.
 
 # Notes
 
