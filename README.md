@@ -18,3 +18,7 @@ I'm trying to find a way around the hard 100mb limit but there doesn't seem a go
 # Next Steps
 
 The majority of the Twitter streaming code is written, I just need to gain approval from Twitter devs to stream tweets from Twitter.
+
+# Accuracy Updates
+
+The most recent test I did the model was 81.6% accurate before throwing out any data that had a confidence level of under 80%.
