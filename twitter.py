@@ -3,7 +3,7 @@ from api_secrets import *
 
 import tweepy.auth
 
-
+# TODO: Authenticate Twitter app so I can live stream tweets into the machine
 class TwitterStreamListener(tweepy.StreamListener):
 
     def on_status(self, status):
