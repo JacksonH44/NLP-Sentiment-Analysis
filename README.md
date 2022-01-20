@@ -2,6 +2,12 @@
 
 This is a project that analyzes sentiment in movie reviwes using NLP. 
 
+# Tools
+The project uses nltk and sk-learn, but I did some experimenting with matplotlib and numpy during it's construction.
+
+# Build Instructions
+Copy the repository and run sentiment.py. You will also need to pickle one of the files, feature_sets.pickle. You can comment out all code after this, and the pickle should only take a short while. 
+
 # Motivations
 
 I am completing a larger project on emotional sentiment analysis and wanted to gain some experience with NLP and ML before.
@@ -12,7 +18,7 @@ The main challenges were finding ways to tweak models and waiting long for the c
 
 # Notes
 
-One of the pickle files, feature_sets.pickle was not abel to be uploaded because it exceed a size of 100mb. If you want to run the model it should only be a few seconds to run that portion of the code and generate the file.
+One of the pickle files, feature_sets.pickle was not able to be uploaded because it exceed a size of 100mb. If you want to run the model it should only be a few seconds to run that portion of the code and generate the file.
 I'm trying to find a way around the hard 100mb limit but there doesn't seem a good way.
 
 # Next Steps
